@@ -1,3 +1,4 @@
+<?php if(!isset($_SESSION)) { session_start(); } ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,15 @@
 </head>
 
 <body>
-<?php include('adminadminNavbar.php'); ?>
+
+<?php
+if($_SESSION['loginstatus']=="")
+{
+	header("location:signin.php");
+}
+?>
+
+<?php include('adminNavbar.php'); ?>
 
 
 <?php include('sidebar.php'); ?>
@@ -19,7 +28,7 @@
 
 
 
-<?php include('adminadminFooter.php'); ?>
+<?php include('adminFooter.php'); ?>
 
 </body>
 

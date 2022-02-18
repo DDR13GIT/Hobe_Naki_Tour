@@ -1,3 +1,5 @@
+<?php if(!isset($_SESSION)) { session_start(); } ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +12,14 @@
 </head>
 
 <body>
+
+<?php
+if($_SESSION['loginstatus']=="")
+{
+	header("location:signin.php");
+}
+?>
+
 <?php include('navbar.php'); ?>
 
 

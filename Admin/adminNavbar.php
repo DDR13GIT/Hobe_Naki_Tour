@@ -36,7 +36,7 @@
 
 
         <a class="h-10 px-4 py-2 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400"
-            href="signin.php">
+            href="\Hobe_Naki_Tour/logout.php">
             Log Out
         </a>
     </nav>
