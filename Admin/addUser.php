@@ -8,18 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include('navbar.php'); ?>
+<?php include('adminNavbar.php'); ?>
 
-    
-    
-    <section class="max-w-4xl p-6 mx-auto mt-20 mb-20 pb-10 pb-10 bg-grey rounded-md  dark:bg-gray-500">
-        <h2 class="mb-6 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Add User</h2>
+<section class="flex">
+
+<?php include('sidebar.php'); ?>
+
+<section class="p-6 w-full bg-grey  dark:bg-gray-500 ">
+        <h2 class="mb-6  mt-40 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Add User</h2>
         
         <form>
             <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                 <div>
                     <label class="text-gray-700 dark:text-gray-200" for="username">Username</label>
-                    <input id="username" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                    <input id="username" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
                  </div>
 
                 <div>
@@ -39,7 +41,7 @@
 
                 <div>
                     <label class="text-gray-700 dark:text-gray-200" for="password">Password</label>
-                    <input id="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                    <input id="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
                 </div>
 
                 <div>
@@ -55,7 +57,9 @@
             </div>
         </form>
     </section>
+</section>
 
-        <?php include('footer.php'); ?>
+
+    <?php include('adminFooter.php'); ?>
 </body>
 </html>

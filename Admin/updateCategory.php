@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include('navbar.php'); ?>
+    <?php include('adminNavbar.php'); ?>
 
     
     
@@ -48,6 +48,6 @@
 
         </form>
     </section>
-    <?php include('footer.php'); ?>
+    <?php include('adminFooter.php'); ?>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include('navbar.php'); ?>
+    <?php include('adminNavbar.php'); ?>
 
 
     <section class="max-w-4xl p-6 mx-auto mt-20 mb-20 pt-10 pb-10 bg-gey rounded-md  dark:bg-gray-500">
@@ -37,7 +37,7 @@
         </form>
     </section>
     
-    <?php include('footer.php'); ?>
+    <?php include('adminFooter.php'); ?>
 
 </body>
 </html>

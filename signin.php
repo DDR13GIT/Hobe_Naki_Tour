@@ -10,11 +10,9 @@
 </head>
 <body>
     
-<div class=" flex justify-center max-w-sm m-auto  overflow-hidden bg-white rounded-lg shadow-lg  lg:max-w-4xl">
-        <div class="hidden bg-cover lg:block lg:w-1/2" style="background-image:url('https://images.unsplash.com/photo-1606660265514-358ebbadc80d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80')"></div>
-        
+<div class="max-w-4xl p-6 mx-auto mt-20 mb-20 pt-10 pb-10 flex justify-center  m-auto  overflow-hidden bg-white rounded-lg   lg:max-w-4xl">        
         <div class="w-full px-6 py-8 md:px-8 lg:w-1/2">
-            <h2 class="text-2xl font-semibold text-center text-gray-700 ">Brand</h2>
+            <h2 class="text-2xl font-semibold text-center text-gray-700 ">Hobe Naki Tour</h2>
 
             <p class="text-xl text-center text-gray-600 ">Welcome back!</p>
 
@@ -40,7 +38,7 @@
             </div>
 
             <div class="mt-4">
-                <label class="block mb-2 text-sm font-medium text-gray-600 " for="LoggingEmailAddress">Email Address</label>
+                <label class="block mb-2 text-sm font-medium text-gray-600 " for="LoggingEmailAddress">Email or Username</label>
                 <input id="LoggingEmailAddress" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="email">
             </div>
 
@@ -54,7 +52,7 @@
             </div>
 
             <div class="mt-8">
-                <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
                     Login
                 </button>
             </div>

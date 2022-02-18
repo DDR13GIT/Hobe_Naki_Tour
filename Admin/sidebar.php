@@ -8,13 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include('navbar.php'); ?>
 
 
-     
-    <div class="flex flex-col w-64 h-screen px-4 py-4  bg-white border-r dark:bg-gray-800 dark:border-gray-600">
+    <div class="flex flex-col w-64  px-4 pb-10 min-h-screen  bg-white border-r dark:bg-gray-800 dark:border-gray-600">
 
-        <div class="flex flex-col justify-between flex-1 mt-6 ">
+        <div class="flex flex-col justify-between flex-1 mt-8 ">
             <nav>
                 <a class="flex items-center px-4  text-gray-700 bg-gray-200 rounded-md dark:bg-gray-700 dark:text-gray-200" href="#">
                     <!-- <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,22 +143,13 @@
                 
             </nav>
 
-            <div class="flex items-center px-2 py-6 ">
+            <div class="flex items-center px-2 ">
                 <img class="object-cover mx-2 rounded-full h-9 w-9" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar"/>
-                <h4 class="mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">John Doe</h4>
+                <h4 class="mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">Admin</h4>
             </div>
         </div>
 
     </div>
-
-
-
-
-
-
-
-    
-    <?php include('footer.php'); ?>
-    
+ 
 </body>
 </html>

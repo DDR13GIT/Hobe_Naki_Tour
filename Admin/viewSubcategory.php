@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include('navbar.php'); ?>
+    <?php include('adminNavbar.php'); ?>
 
     
-    <?php include('navbar.php'); ?>
+    <?php include('adminNavbar.php'); ?>
 
 </body>
 </html>
