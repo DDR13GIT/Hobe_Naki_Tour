@@ -51,39 +51,6 @@
 </header> -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <header class="shadow-sm bg-gray-800 sticky top-0 z-50">
 <nav class=" w-full container p-5  mx-auto lg:flex lg:justify-between lg:items-center ">
         <div class="flex items-center justify-between">
