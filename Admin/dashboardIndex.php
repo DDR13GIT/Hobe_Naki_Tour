@@ -29,7 +29,7 @@
 
         <?php include('sidebar.php'); ?>
 
-        <section class="text-white bg-blue-500 w-full">
+        <section class="text-white bg-gray-500 w-full">
             <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
                 <div class="max-w-xl">
                     <h2 class="text-3xl font-bold l">
