@@ -11,10 +11,7 @@
 
 <body>
 
-
-
-
-    <header class="shadow-sm bg-gray-800 sticky top-0 z-50">
+<header class="shadow-sm bg-gray-800 sticky top-0 z-50">
         <nav class=" w-full container p-5  mx-auto flex justify-between items-center ">
             <div class="flex items-center justify-between">
                 <div>
@@ -31,6 +28,7 @@
                     </button>
                 </div>
             </div>
+            
             <div class=" flex justify-between gap-5">
             <div class="flex items-center  right-0 top-0">
                 <img class="object-cover mx-2 rounded-full h-9 w-9" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar" />

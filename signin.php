@@ -36,7 +36,7 @@
             $_SESSION['loginstatus'] = "yes";
 
             if ($_SESSION["usertype"] == "Admin") {
-                echo "Matha mundu";
+            
                 header("location:admin/dashboardIndex.php");
 
 
