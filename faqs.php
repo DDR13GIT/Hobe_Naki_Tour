@@ -12,8 +12,23 @@
 <body>
     <?php include('navbar.php'); ?>
 
-    <div class="max-w-3xl mx-auto space-y-4">
-        <details class="group" open>
+<!-- banner section**************************************** -->
+<div class=" bg-gradient-to-r from-gray-800 to-blue-600 ">
+    <div class=" w-full mx-auto py-12 px-80 z-20">
+        <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+            <span class="block">
+                Hello Traveller 
+            </span>
+            <span class="block text-indigo-500">
+                Find your answers from us here
+            </span>
+        </h2>
+    </div>
+</div>
+
+
+    <div class="w-full px-80 mx-auto space-y-5 pt-40 pb-40">
+        <details class="group" >
             <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
                 <h2 class="font-medium">
                     Can you guarantee a delivery date?
@@ -55,6 +70,86 @@
             </div>
         </details>
 
+        <details class="group">
+            <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
+                <h2 class="font-medium">
+                    How do I send a gift without the person knowing?
+                </h2>
+
+                <svg class="w-5 h-5 transition-transform duration-300 group-open:-rotate-180"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+
+            <div class="px-4 mt-4">
+                <p class="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
+                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                    consequuntur distinctio corporis earum similique!
+                </p>
+            </div>
+        </details>
+        <details class="group">
+            <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
+                <h2 class="font-medium">
+                    How do I send a gift without the person knowing?
+                </h2>
+
+                <svg class="w-5 h-5 transition-transform duration-300 group-open:-rotate-180"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+
+            <div class="px-4 mt-4">
+                <p class="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
+                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                    consequuntur distinctio corporis earum similique!
+                </p>
+            </div>
+        </details>
+        <details class="group">
+            <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
+                <h2 class="font-medium">
+                    How do I send a gift without the person knowing?
+                </h2>
+
+                <svg class="w-5 h-5 transition-transform duration-300 group-open:-rotate-180"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+
+            <div class="px-4 mt-4">
+                <p class="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
+                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                    consequuntur distinctio corporis earum similique!
+                </p>
+            </div>
+        </details>
+        <details class="group">
+            <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
+                <h2 class="font-medium">
+                    How do I send a gift without the person knowing?
+                </h2>
+
+                <svg class="w-5 h-5 transition-transform duration-300 group-open:-rotate-180"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+
+            <div class="px-4 mt-4">
+                <p class="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
+                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
+                    consequuntur distinctio corporis earum similique!
+                </p>
+            </div>
+        </details>
         <details class="group">
             <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
                 <h2 class="font-medium">

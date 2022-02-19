@@ -11,7 +11,8 @@
 
 <footer class="bg-gray-50">
         <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-12 sm:px-6 lg:px-8">
-            <span class="block w-32 h-10 bg-gray-200 rounded-lg"></span>
+        
+            <img class="h-7" src="projectImages/logo.svg" alt="">
 
             <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
                 <div class="lg:order-last">

@@ -55,7 +55,7 @@
 
     <div class="max-w-4xl p-6 mx-auto mt-20 mb-20 pt-10 pb-10 flex justify-center  m-auto  overflow-hidden bg-white rounded-lg   lg:max-w-4xl">
         <div class="w-full px-6 py-8 md:px-8 lg:w-1/2">
-            <h2 class="text-2xl font-semibold text-center text-gray-700 ">Hobe Naki Tour</h2>
+        <img class="h-7 block mx-auto my-5" src="projectImages/logo.svg" alt="">
 
             <p class="text-xl text-center text-gray-600 ">Welcome back!</p>
 

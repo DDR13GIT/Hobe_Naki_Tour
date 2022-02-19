@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
 
 
-<header class="shadow-sm bg-gray-800 sticky top-0 z-50">
-<nav class=" w-full container p-5  mx-auto lg:flex lg:justify-between lg:items-center ">
+<header class="shadow-sm bg-gray-800  sticky top-0 z-50">
+<nav class=" w-full px-80 py-5  mx-auto flex justify-between items-center ">
         <div class="flex items-center justify-between">
             <div>
-                <a class="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                    href="#">Hobe Naki Tour</a>
+            <img class="h-7" src="projectImages/logo.svg" alt="">
             </div>
 
             <!-- Mobile menu button -->

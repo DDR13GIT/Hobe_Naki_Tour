@@ -12,6 +12,22 @@
 <body>
     <?php include('navbar.php'); ?>
 
+<!-- banner section**************************************** -->
+<div class=" bg-gradient-to-r from-gray-800 to-blue-600 ">
+    <div class=" w-full mx-auto py-12 px-80 z-20">
+        <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+            <span class="block">
+                Hello Traveller 
+            </span>
+            <span class="block text-indigo-500 capitalize">
+               Choose from varieties of Categories
+            </span>
+        </h2>
+    </div>
+</div>
+
+
+
     <section>
         <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-5 lg:grid-cols-4 lg:items-start">
