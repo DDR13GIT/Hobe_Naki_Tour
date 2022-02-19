@@ -10,9 +10,12 @@
 <body>
     <?php include('adminNavbar.php'); ?>
 
+    <section class="flex">
+
+<?php include('sidebar.php'); ?>
     
     
-    <section class="max-w-4xl p-6 mx-auto mt-20 mb-20 pt-10 pb-10 bg-gey rounded-md  dark:bg-gray-500">
+    <section class="p-6 w-full bg-grey  dark:bg-gray-500">
         <h2 class="mb-6 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Add Subcategory</h2>
         
         <form>
@@ -55,6 +58,7 @@
             </div>
 
         </form>
+    </section>
     </section>
     <?php include('adminFooter.php'); ?>
 </body>
