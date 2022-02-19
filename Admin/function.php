@@ -14,7 +14,6 @@
 		if (mysqli_connect_errno()) {
 			echo "failed to connect to mysqli:" . mysqli_connect_error();
 		}
-		echo "failed to connect to mysqli:";
 		return $cn;
 	}
 	$cn = mysqli_connect("localhost", "root", "", "travel");

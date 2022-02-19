@@ -10,7 +10,15 @@
 </head>
 
 <body>
+    <?php if (!isset($_SESSION)) {
+        session_start();
+    } ?>
 
+    <?php
+    if ($_SESSION['loginstatus'] == "") {
+        header("location:signin.php");
+    }
+    ?>
 
     <?php include('function.php'); ?>
 
