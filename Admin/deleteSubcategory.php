@@ -1,3 +1,6 @@
+<?php if (!isset($_SESSION)) {
+    session_start();
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +13,26 @@
 </head>
 
 <body>
+    <?php
+    if ($_SESSION['loginstatus'] == "") {
+        header("location:signin.php");
+    }
+    ?>
+
+    <?php include('function.php'); ?>
+
+
+
+
+    <?php
+    if (isset($_POST["deleteBTN"])) {
+        $cn = makeconnection();
+        $s = "delete from subcategory  where subcatid='" . $_POST["selectSubCategory"] . "'";
+        mysqli_query($cn, $s);
+        mysqli_close($cn);
+        echo "<script>alert('Record Delete');</script>";
+    }
+    ?>
     <?php include('adminNavbar.php'); ?>
 
     <section class="flex">
@@ -27,14 +50,45 @@
                     <div class="flex-1 hidden sm:block">
                         <label class="sr-only" for="location"> Location </label>
 
-                        <select class="w-4/5 h-10 mt-2 mb-3 px-3 text-sm border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" id="location">
-                            <option>Family Tour</option>
-                            <option>Adventure Tour</option>
-                            <option>Special Event Tour</option>
-                            <option>Group tour</option>
-                            <option>Themed Vacation</option>
+                        <select name="selectCategory" class="w-4/5 h-10 mt-2 mb-3 px-3 text-sm border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" id="location">
+                            <option value="">Select</option>
+
+                            <?php
+                            $cn = makeconnection();
+                            $s = "select * from category";
+                            $result = mysqli_query($cn, $s);
+                            $r = mysqli_num_rows($result);
+                            //echo $r;
+
+                            while ($data = mysqli_fetch_array($result)) {
+                                if (isset($_POST["show"]) && $data[0] == $_POST["selectCategory"]) {
+                                    echo "<option value=$data[0] selected>$data[1]</option>";
+                                } else {
+                                    echo "<option value=$data[0]>$data[1]</option>";
+                                }
+                            }
+                            mysqli_close($cn);
+                            ?>
                         </select>
-                        <button class="h-9 px-6 py-2 ml-16 justify-end leading-5 text-black  transition-colors duration-300 transform bg-white rounded-md hover:bg-grey  ">Show</button>
+                        <button class="h-9 px-6 py-2 ml-16 justify-end leading-5 text-black  transition-colors duration-300 transform bg-white rounded-md hover:bg-grey" name="showBTN">Show</button>
+
+                        <?php
+                        if (isset($_POST["showBTN"])) {
+
+                            $cn = makeconnection();
+                            $s = "select * from subcategory where catid='" . $_POST["selectCategory"] . "'";
+                            $result = mysqli_query($cn, $s);
+                            $r = mysqli_num_rows($result);
+                            //echo $r;
+
+                            while ($data = mysqli_fetch_array($result)) {
+
+
+                                echo "<option value=$data[0]>$data[1]</option>";
+                            }
+                            mysqli_close($cn);
+                        }
+                        ?>
                     </div>
 
 
@@ -44,12 +98,26 @@
                     <div class="flex-1 hidden sm:block">
                         <label class="sr-only" for="location"> Location </label>
 
-                        <select class="w-4/5 h-10 mt-2 mb-3 px-3 text-sm border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" id="location">
-                            <option>Family Tour</option>
-                            <option>Adventure Tour</option>
-                            <option>Special Event Tour</option>
-                            <option>Group tour</option>
-                            <option>Themed Vacation</option>
+                        <select name="selectSubCategory" class="w-4/5 h-10 mt-2 mb-3 px-3 text-sm border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" id="location">
+                            <option value="">Select</option>
+
+                            <?php
+                            if (isset($_POST["showBTN"])) {
+
+                                $cn = makeconnection();
+                                $s = "select * from subcategory where catid='" . $_POST["selectCategory"] . "'";
+                                $result = mysqli_query($cn, $s);
+                                $r = mysqli_num_rows($result);
+                                //echo $r;
+
+                                while ($data = mysqli_fetch_array($result)) {
+
+
+                                    echo "<option value=$data[0]>$data[1]</option>";
+                                }
+                                mysqli_close($cn);
+                            }
+                            ?>
                         </select>
 
                     </div>
@@ -59,7 +127,7 @@
 
 
                 <div class="flex justify-end mt-6 mr-2">
-                    <button class="px-6 py-2 leading-5 text-white  transition-colors duration-300 transform bg-blue-400 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 font-bold">Delete</button>
+                    <button class="px-6 py-2 leading-5 text-white  transition-colors duration-300 transform bg-blue-400 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 font-bold" name="deleteBTN">Delete</button>
                 </div>
             </form>
         </section>
