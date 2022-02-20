@@ -11,7 +11,7 @@
 <body>
 
 
-<header class="shadow-sm bg-gray-800  sticky top-0 z-50">
+<header class="shadow-sm  sticky top-0 z-50 bg-slate-50">
 <nav class=" w-full px-80 py-5  mx-auto flex justify-between items-center ">
         <div class="flex items-center justify-between">
             <div>
@@ -34,15 +34,15 @@
 
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
          <div class="flex flex-col mt-4 space-y-2 lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0">
-            <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-blue-500"
+            <a class="text-gray-700  lg:px-6  hover:text-blue-500"
                 href="index.php">Home</a>
-            <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-blue-500"
+            <a class="text-gray-700  lg:px-6  hover:text-blue-500"
                 href="about.php">About</a>
-            <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-blue-500"
+            <a class="text-gray-700  lg:px-6  hover:text-blue-500"
                 href="packages.php">Category</a>
-            <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-blue-500"
+            <a class="text-gray-700  lg:px-6  hover:text-blue-500"
                 href="faqs.php">FAQ</a>
-            <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-blue-500"
+            <a class="text-gray-700  lg:px-6  hover:text-blue-500"
                 href="index.php#ContactUs">Contact</a>
         </div>
 

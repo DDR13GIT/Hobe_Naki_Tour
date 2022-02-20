@@ -14,6 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 
 <body>
@@ -26,61 +27,60 @@
 
     <?php include('navbar.php'); ?>
 
-   
+
     <!-- Hero code**************************************** -->
-    <section class="bg-white dark:bg-gray-800">
-        <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-            <div class="w-full lg:w-1/2">
-                <div class="lg:max-w-lg">
-                    <h1 class="text-3xl font-bold tracking-wide text-gray-800 dark:text-white lg:text-5xl">
-                        Find Your Next Tour Destination
+    <section class="bg-white ">
+        <div style="background-image: url('projectImages/hero.jpeg');" class="rounded-3xl mx-40  bg-no-repeat bg-cover">
+
+            <div class=" flex flex-col px-80 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+
+                <div class="w-full text-center">
+                    <h1 id="herotext" class="text-2xl tracking-wide text-gray-800 my-3 ">
+                        All your tour needs in one place
+                    </h1>
+                    <h1 class="text-5xl font-bold tracking-wide text-white ">
+                        Explore Beautiful Places
                     </h1>
 
-                    <div class="mt-8 space-y-5">
-                        <p class="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                    <div class="w-full mt-8 bg-white border rounded-md  focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300 dark:focus-within:border-blue-400 focus-within:ring-opacity-40">
+                        <form class="flex flex-col lg:flex-row">
+                            <input type="text" placeholder="Enter your tour destination" class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none  focus:outline-none focus:placeholder-transparent focus:ring-0" />
 
-                            <span class="mx-2">Risk Free Payment System</span>
-                        </p>
-
-                        <p class="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-
-                            <span class="mx-2">Small and Organized Tour</span>
-                        </p>
-
-                        <p class="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-
-                            <span class="mx-2">Easy to Use</span>
-                        </p>
+                            <button type="button" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
+                                Search
+                            </button>
+                        </form>
                     </div>
                 </div>
 
-                <div class="w-full mt-8 bg-transparent border rounded-md lg:max-w-sm dark:border-gray-700 focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300 dark:focus-within:border-blue-400 focus-within:ring-opacity-40">
-                    <form class="flex flex-col lg:flex-row">
-                        <input type="email" placeholder="Enter your email address" class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0" />
-
-                        <button type="button" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
-                            Join Us
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
+                <!-- <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
                 <img class="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://images.unsplash.com/photo-1577624060070-ca1afe89ddad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1626&q=80" alt="glasses photo">
+            </div> -->
             </div>
         </div>
     </section>
+<?php
+    echo "
+    <script type=\"text/javascript\">
+    var app = document.getElementById('herotext');
 
-    <h1 class="text-4xl font-bold tracking-wide text-gray-800 mx-auto text-center mt-20 mb-10 ">
+    var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 75,
+    });
+
+    typewriter
+    .pauseFor(1000)
+    .typeString('All your tour needs in one place')
+    .pauseFor(300)
+    .deleteChars(10)
+    .pauseFor(1000)
+    .start();
+    
+    </script>";
+    ?>
+
+    <h1 class="text-4xl font-bold tracking-wide text-gray-800 mx-auto text-center mt-20 ">
         Trending Tours
     </h1>
 
@@ -101,9 +101,9 @@
                 <div class="mt-4">
                     <div class="flex items-center">
                         <div class="flex items-center">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>                            <a href="#" class="mx-2 font-semibold text-green-600 "> From 5500 BDT</a>
+                            </svg> <a href="#" class="mx-2 font-semibold text-green-600 "> From 5500 BDT</a>
                         </div>
                         <span class="mx-1 text-xs text-gray-600 "> 2 Days & 3 night</span>
 
@@ -125,9 +125,9 @@
                 <div class="mt-4">
                     <div class="flex items-center">
                         <div class="flex items-center">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>                            <a href="#" class="mx-2 font-semibold text-green-600 "> From 5500 BDT</a>
+                            </svg> <a href="#" class="mx-2 font-semibold text-green-600 "> From 5500 BDT</a>
                         </div>
                         <span class="mx-1 text-xs text-gray-600 "> 2 Days & 3 night</span>
 
