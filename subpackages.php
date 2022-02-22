@@ -49,7 +49,7 @@
                                 <div class="px-5 py-6 space-y-2">
                                     <?php
 
-
+                                    $condition = "";
                                     $s = "select * from category";
                                     $result = mysqli_query($cn, $s);
                                     $r = mysqli_num_rows($result);
@@ -65,7 +65,6 @@
     </label>
 </div>";
                                     }
-                                    // mysqli_close($cn);
                                     ?>
 
 
@@ -114,20 +113,33 @@
 
 
                         <?php
+                        $s = "select * from subcategory where Catid IN (0" . $_GET["condition"] . ")";
 
 
-                        $s = "select * from subcategory ";
 
+                        if (isset($_POST['commit'])) {
+                            while ($r--) {
 
+                                if (isset($_POST['type' . $r])) {
+                                    $condition = $condition . ',' . $r;
+                                }
+                                echo $condition;
+                            }
+                        ?>
+                            <script>
+                                window.location.href = 'subpackages.php?condition=<?php echo $condition; ?>';
+                            </script>
+
+                        <?php
+                        }
 
 
                         $cn = makeconnection();
                         $result = mysqli_query($cn, $s);
                         $r = mysqli_num_rows($result);
-                        //echo $r;
+
 
                         while ($data = mysqli_fetch_array($result)) {
-
                         ?>
 
                             <div class="max-w-lg mx-2 overflow-hidden mt-4 bg-white rounded-lg shadow-md ">
@@ -165,32 +177,13 @@
                                 </div>
                             </div>
 
-                        <?php } ?>
+                        <?php }
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <?php
-    $condition = '';
-    if (isset($_POST['commit'])) {
-        while ($r--) {
-
-            if (isset($_POST['type' . $r])) {
-                $condition = $condition . ',' . $r;
-            }
-            echo $condition;
-        }
-    ?>
-        <script>
-            window.location.href = 'subpackages.php?condition=<?php echo $condition; ?>';
-            </script>
-    <?php
-    }
-
-    ?>
 
 
 

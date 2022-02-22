@@ -39,7 +39,7 @@
             <a class="text-gray-700  lg:px-6  hover:text-blue-500"
                 href="about.php">About</a>
             <a class="text-gray-700  lg:px-6  hover:text-blue-500"
-                href="packages.php">Category</a>
+                href="packages.php">Packages</a>
             <a class="text-gray-700  lg:px-6  hover:text-blue-500"
                 href="faqs.php">FAQ</a>
             <a class="text-gray-700  lg:px-6  hover:text-blue-500"
