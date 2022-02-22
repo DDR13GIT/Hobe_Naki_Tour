@@ -181,7 +181,6 @@
             if (isset($_POST['type' . $r])) {
                 $condition = $condition . ',' . $r;
             }
-            echo $condition;
         }
     ?>
         <script>
