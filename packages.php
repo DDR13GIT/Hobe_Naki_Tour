@@ -99,7 +99,7 @@
                             <span class="hidden sm:inline">
                                 Showing
                             </span>
-                            all Products
+                            all Packages
                         </p>
 
 

@@ -98,7 +98,7 @@
                             <span class="hidden sm:inline">
                                 Showing
                             </span>
-                            all Products
+                            filtered Packages
                         </p>
 
 
