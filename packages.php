@@ -116,7 +116,7 @@
                         <?php
 
 
-                        $s = "select * from subcategory ";
+                        $s = "select * from package";
 
 
 
@@ -131,11 +131,11 @@
                         ?>
 
                             <div class="max-w-lg mx-2 overflow-hidden mt-4 bg-white rounded-lg shadow-md ">
-                                <img class="w-full h-64" src="projectImages/sylhet.jpg" alt="Article">
+                                <img class="w-full h-64" src="projectImages/<?php echo $data["coverpic"]; ?>" alt="Article">
 
                                 <div class="p-4">
                                     <div>
-                                        <span class="text-xs font-medium text-blue-600 uppercase ">Premium</span>
+                                        <span class="text-xs font-medium text-blue-600 uppercase "><?php echo $data["Tourtype"]; ?></span>
                                         <a href="packages.php" class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform d hover:text-blue-600 "><?php echo $data[1]; ?></a>
                                         <p class="mt-2 text-sm text-gray-600 "></p>
                                     </div>
@@ -144,12 +144,12 @@
                                         <div class="flex items-center">
                                             <svg class="h-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg> <a href="#" class="mx-2 font-semibold text-green-600 "> From 5500 BDT</a>
+                                            </svg> <a href="#" class="mx-2 font-semibold text-green-600 "> <?php echo $data["Packprice"]; ?></a>
                                         </div>
                                         <div class="flex items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg> <a href="#" class="mx-1 font-semibold text-xs text-green-800 "> 2 days & 3 nights</a>
+                                            </svg> <a href="#" class="mx-1 font-semibold text-xs text-green-800 "><?php echo $data["Duration"]; ?></a>
                                         </div>
                                     </div>
 

@@ -29,9 +29,9 @@
 </div>
 
     <section class="px-80 py-40 mx-auto">
-        <p class="text-3xl font-bold pb-5">
+        <p class="text-5xl font-bold pb-5">
             About us </p>
-        <p class="text-lg  text-gray-500">
+        <p class="text-xl text-justify  text-gray-500">
             TourHobe.com was founded by 4 Travel enthusiastic people who shared their dream and vision to create a platform that will serve the purpose of Bangladeshi travel lovers.
             <br></br>
             TourHobe is the country’s first and leading online travel booking platform. Initially started with the dream to make travel easier for people. And that is what we did since our inception. And now with our new, innovative, easy-to-use website, travel services are on your palm. The dynamic website lets you book your resort, find your perfect holiday destination from our holiday packages around Bangladesh.
@@ -49,8 +49,7 @@
             <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl ">Our <span class="text-blue-500">Executive Team</span></h1>
 
             <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
-            </p>
+            Meet the Management            </p>
 
             <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
 
