@@ -147,7 +147,7 @@
                                 <div class="p-4">
                                     <div>
                                         <span class="text-xs font-medium text-blue-600 uppercase "><?php echo $data["Tourtype"]; ?></span>
-                                        <a href="packages.php" class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform d hover:text-blue-600 "><?php echo $data[1]; ?></a>
+                                        <a href="localhost/Hobe_Naki_Tour/packageDetails.php" class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform d hover:text-blue-600 "><?php echo $data[1]; ?></a>
                                         <p class="mt-2 text-sm text-gray-600 "></p>
                                     </div>
 
@@ -164,9 +164,9 @@
                                         </div>
                                     </div>
 
-                                    <button name="add" type="button" class="flex items-center justify-center w-full px-8 py-4 mt-4 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
+                                    <button  name="add" type="button" class="flex items-center justify-center w-full px-8 py-4 mt-4 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400" >
                                         <span class="text-sm font-medium">
-                                            Show Details
+                                        <a href="packageDetails.php" >Show Details </a>
                                         </span>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
