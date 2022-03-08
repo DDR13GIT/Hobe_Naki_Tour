@@ -29,7 +29,7 @@
 		<section class="p-6 w-full bg-grey  dark:bg-gray-500">
 			<h2 class="mb-6 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Add Package</h2>
 
-			<form method="post">
+			<form method="post" enctype="multipart/form-data">
 				<div>
 					<label class=" text-gray-700 dark:text-gray-200" for="packageName">Package Name</label>
 					<input name="packageName" id="packageName" type="text" class="block w-4/5 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:text-black dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
@@ -39,7 +39,7 @@
 				<!-- <input id="emailAddress" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"> -->
 
 				<div class="flex-1 hidden sm:block">
-					<label class="sr-only" for="location"> Location </label>
+				
 
 					<select name="selectCategory" class="w-4/5 h-10 mt-2 mb-3 px-3 text-sm border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" id="location">
 						<option value="">Select</option>
@@ -60,55 +60,59 @@
 						}
 						?>
 					</select>
-					<button name="showBTN" class="px-6 py-2 ml-16 justify-end leading-5 text-black  transition-colors duration-300 transform bg-white rounded-md hover:bg-grey">Show</button>
+					
 				</div>
 
-				<label class="text-gray-700 dark:text-gray-200" for="selectCategory">Select Subcategory </label>
-				<!-- <input id="emailAddress" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"> -->
-
-				<div class="flex-1 hidden sm:block">
-					<label class="sr-only" for="location"> Location </label>
-
-					<select name="selectSubCategory" class="w-4/5 h-10 mt-2 mb-3 px-3 text-sm border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" id="location">
-						<option value="">Select</option>
-
-						<?php
-						$cn = makeconnection();
-						$s = "select * from subcategory";
-						$result = mysqli_query($cn, $s);
-						$r = mysqli_num_rows($result);
-						//echo $r;
-
-						while ($data = mysqli_fetch_array($result)) {
-							if (isset($_POST["showBTN"])) {
-								if ($data[2] == $_POST["selectCategory"]) {
-									echo "<option value=$data[0] >$data[1]</option>";
-								} else {
-									//	echo "<option value=$data[0]>$data[1]</option>";
-								}
-							}
-						}
-						?>
-					</select>
-
-				</div>
+				
 
 				<div>
 					<label class=" text-gray-700 dark:text-gray-200" for="packagePrice">Package Price</label>
 					<input name="packagePrice" id="packagePrice" type="text" class="block w-4/5 px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md  dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
 				</div>
-
+<!-- 
 				<label class="text-gray-700 dark:text-gray-200" for="details">Details</label>
-				<input name="detail" id="details" type="text" class="block w-4/5 h-32 px-4 py-2 mt-2  text-black bg-white border border-gray-200 rounded-md  dark:text-black dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+				<input name="detail" id="details" type="text" class="block w-4/5 h-32 px-4 py-2 mt-2  text-black bg-white border border-gray-200 rounded-md  dark:text-black dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"> -->
+
+				<div>
+					<label class=" text-gray-700 dark:text-gray-200" for="packageName">Location</label>
+					<input name="location" id="location" type="text" class="block w-4/5 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:text-black dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+				</div>
+
+
+				<div>
+					<label class=" text-gray-700 dark:text-gray-200" for="packageName">Duration</label>
+					<input name="duration" id="duration" type="text" class="block w-4/5 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:text-black dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+				</div>
+				<div>
+					<label class=" text-gray-700 dark:text-gray-200" for="packageName">Group Size</label>
+					<input name="groupSize" id="duration" type="text" class="block w-4/5 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:text-black dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+				</div>
+
+				
+				<label class="text-gray-700 dark:text-gray-200" for="selectCategory">Tour Type</label>
+				<div class="flex-1 hidden sm:block">
+			
+					<select name="tourType" class="w-4/5 h-10 mt-2 mb-3 px-3 text-sm border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" id="location">
+						<option value="Regular">Regular</option>
+						<option value="Premium">Premium</option>
+
+
+					</select>
+					
+				</div>
+
 
 				<div class="h-10 mt-4">
-					<input type="file" class="hide_file  dark:text-gray-200 ">
+					<input type="file" class="hide_file  dark:text-gray-200 " name="t4">
 				</div>
 				<div class="h-10 mt-4">
-					<input type="file" class="hide_file  dark:text-gray-200 ">
+					<input type="file" class="hide_file  dark:text-gray-200 "name="t5">
 				</div>
 				<div class="h-10 mt-4">
-					<input type="file" class="hide_file  dark:text-gray-200 ">
+					<input type="file" class="hide_file  dark:text-gray-200 "name="t6">
+				</div>
+				<div class="h-10 mt-4">
+					<input type="file" class="hide_file  dark:text-gray-200 "name="t7">
 				</div>
 
 				<div class="flex justify-end mt-6">
@@ -118,16 +122,60 @@
 		</section>
 	</section>
 
-
-
-
-
 	<?php
-	if (isset($_POST["saveBTN"])) {
-		$cn = makeconnection();
-		$f1 = 0;
-		$f2 = 0;
-		$f3 = 0;
+	if (isset($_POST["saveBTN"])&& isset($_FILES['t4'])) {
+	// echo "hello";
+	// 	echo "<pre>";
+	// print_r($_FILES['t4']);
+	// echo "</pre>";
+
+	$img_name = $_FILES['t4']['name'];
+	$img_size = $_FILES['t4']['size'];
+	$tmp_name = $_FILES['t4']['tmp_name'];
+	$error = $_FILES['t4']['error'];
+
+
+	if ($error === 0) {
+		if ($img_size > 170000) {
+			$em = "Sorry, your file is too large.";
+	
+		}else {
+			$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+			$img_ex_lc = strtolower($img_ex);
+
+			 $allowed_exs = array("jpg", "jpeg", "png"); 
+
+			if (in_array($img_ex_lc, $allowed_exs)) {
+				$new_img_name =$img_ex_lc;
+			// 	$img_upload_path = 'uploads/'.$new_img_name;
+			//	move_uploaded_file($tmp_name, $img_upload_path);
+
+			
+
+
+				$s = "insert into package(packname,category,packprice,location,duration,groupsize,tourtype,pic1,pic2,pic3,coverpic) 
+    values('" . $_POST["packageName"] . "','" . $_POST["selectCategory"] .  "','" . $_POST["packagePrice"] . "','" .$_POST["location"] . "','" .$_POST["duration"] . "','" .$_POST["groupSize"] . "','".$_POST["tourType"] . "','" . $new_img_name  . "')";
+		mysqli_query($cn, $s);
+		mysqli_close($cn);
+		echo "<script>alert('Record Save');</script>";
+
+			}
+		}
+	}
+	}
+
+		
+
+
+
+
+
+
+		
+		// $cn = makeconnection();
+		// $f1 = 0;
+		// $f2 = 0;
+		// $f3 = 0;
 
 		// $target_dir = "packimages/";
 		// //t4
@@ -253,12 +301,12 @@
 		// 	if($f1>0&& $f2>0&&$f3>0)
 		// 	{
 
-		$s = "insert into package(packname,category,subcategory,packprice,detail) 
-    values('" . $_POST["packageName"] . "','" . $_POST["selectCategory"] . "','" . $_POST["selectSubCategory"] . "','" . $_POST["packagePrice"] . "','" . $_POST["detail"] . "')";
-		mysqli_query($cn, $s);
-		mysqli_close($cn);
-		echo "<script>alert('Record Save');</script>";
-	}
+	// 	$s = "insert into package(packname,category,subcategory,packprice,detail) 
+    // values('" . $_POST["packageName"] . "','" . $_POST["selectCategory"] . "','" . $_POST["selectSubCategory"] . "','" . $_POST["packagePrice"] . "','" . $_POST["detail"] . "')";
+	// 	mysqli_query($cn, $s);
+	// 	mysqli_close($cn);
+	// 	echo "<script>alert('Record Save');</script>";
+	// }
 
 
 
