@@ -186,7 +186,7 @@
         }
     ?>
         <script>
-            window.location.href = 'packageDetails.php?condition=<?php echo $condition; ?>';
+            window.location.href = 'subpackages.php?condition=<?php echo $condition; ?>';
         </script>
     <?php
     }
