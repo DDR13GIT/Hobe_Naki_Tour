@@ -14,8 +14,8 @@
 
 <body>
     <?php include('navbar.php'); ?>
-    <?php include('function.php'); 
-    
+    <?php include('function.php');
+
     $price;
     ?>
     <!-- banner section**************************************** -->
@@ -60,7 +60,7 @@
                                                 <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
                                             </svg>
                                         </div>
-                                        <input datepicker datepicker-buttons  name= "date" type="text" class="bg-gray-50 border border-gray-300  sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Select Date">
+                                        <input datepicker datepicker-buttons name="date" type="text" class="bg-gray-50 border border-gray-300  sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Select Date">
                                     </div>
 
 
@@ -68,7 +68,7 @@
                                         <div><label for="yes" class="font-medium text-gray-700 select-none">Need tour guide?</label>
                                             <p class="font-medium text-gray-500 text-md"><span class="font-bold">200৳</span> will be added </p>
                                         </div>
-                                    </div>  
+                                    </div>
 
 
 
@@ -93,67 +93,71 @@
                 <?php
 
 
-$s = "select * from package where Packid='$_GET[packid]'";
+                $s = "select * from package where Packid='$_GET[packid]'";
 
 
 
 
-$cn = makeconnection();
-$result = mysqli_query($cn, $s);
-$r = mysqli_num_rows($result);
-//echo $r;
+                $cn = makeconnection();
+                $result = mysqli_query($cn, $s);
+                $r = mysqli_num_rows($result);
+                //echo $r;
 
-while ($data = mysqli_fetch_array($result)) {
-$price = $data[3];
-?>
+                while ($data = mysqli_fetch_array($result)) {
+                    $price = $data[3];
+                ?>
 
-                <div class="lg:col-span-3">
-                    <div class="flex items-center justify-between">
-                        <span class="block text-blue-500 capitalize font-bold text-5xl">
-                        <?php echo $data[1]; ?>
+                    <div class="lg:col-span-3">
+                        <div class="flex items-center justify-between">
+                            <span class="block text-blue-500 capitalize font-bold text-5xl">
+                                <?php echo $data[1]; ?>
+                            </span>
+                        </div>
+                        <span class="block text-gray-500 capitalize font-bold text-lg mt-2">
+                            <?php echo $data[7]; ?>
                         </span>
-                    </div>
-                    <span class="block text-gray-500 capitalize font-bold text-lg mt-2">
-                    <?php echo $data[7]; ?>
-                    </span>
 
 
-                    <div class="grid grid-cols-3 gap-2 sm:gap-4 py-4">
-                        <div class="flex justify-start gap-1 sm:gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <h1 class="flex flex-col"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Duration</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[8]; ?></span></h1>
-                        </div>
-                        <div class="flex sm:justify-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Tour Type</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[9]; ?></span></h1>
-                        </div>
-                        <div class="flex sm:justify-end gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                            <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Max Group Size</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[10]; ?></span></h1>
-                        </div>
-                    </div>
-
-                    <!-- Swiper -->
-                    <div class="swiper mySwiper rounded-lg h-96">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="projectImages/hero.jpg" />
+                        <div class="grid grid-cols-3 gap-2 sm:gap-4 py-4">
+                            <div class="flex justify-start gap-1 sm:gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <h1 class="flex flex-col"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Duration</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[8]; ?></span></h1>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <div class="flex sm:justify-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Tour Type</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[9]; ?></span></h1>
+                            </div>
+                            <div class="flex sm:justify-end gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                                <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Max Group Size</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[10]; ?></span></h1>
                             </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-<?php } ?>
-                    <!-- Swiper JS -->
-                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper rounded-lg h-96">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="projectImages/<?php echo $data[4]; ?>" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="projectImages/<?php echo $data[5]; ?>" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="projectImages/<?php echo $data[6]; ?>" />
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <!-- Swiper JS -->
+                        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                    <?php } ?>
 
                     <!-- Initialize Swiper -->
                     <script>
@@ -167,6 +171,9 @@ $price = $data[3];
                             pagination: {
                                 el: ".swiper-pagination",
                                 clickable: true,
+                                autoplay: {
+                                    delay: 1000,
+                                },
                             },
                         });
                     </script>
@@ -350,7 +357,7 @@ $price = $data[3];
 
 
 
-                </div>
+                    </div>
 
             </div>
         </div>
@@ -362,7 +369,7 @@ $price = $data[3];
         $cn = makeconnection();
         $yes;
         if (isset($_POST["tourGuide"])) {
-           $yes=200;
+            $yes = 200;
         }
         $s = "insert into bookInfo (Date,PackageId,Price,additionalExpense) values('" . $_POST["date"] . "','" . $_GET["packid"] . "','" . $price . "','" . $yes . "')";
         mysqli_query($cn, $s);
@@ -376,4 +383,3 @@ $price = $data[3];
 </body>
 
 </html>
-
