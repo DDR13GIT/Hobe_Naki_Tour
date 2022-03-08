@@ -14,7 +14,10 @@
 
 <body>
     <?php include('navbar.php'); ?>
-    <?php include('function.php'); ?>
+    <?php include('function.php'); 
+    
+    $price;
+    ?>
     <!-- banner section**************************************** -->
     <div class=" bg-gradient-to-r from-gray-800 to-blue-600 ">
         <div class=" w-full mx-auto py-12 px-80 z-20">
@@ -57,7 +60,7 @@
                                                 <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
                                             </svg>
                                         </div>
-                                        <input datepicker datepicker-buttons type="text" class="bg-gray-50 border border-gray-300  sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Select Date">
+                                        <input datepicker datepicker-buttons  name= "date" type="text" class="bg-gray-50 border border-gray-300  sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Select Date">
                                     </div>
 
 
@@ -72,7 +75,7 @@
                                 </div>
                             </fieldset>
                             <div class="flex px-3 py-3 border-t border-gray-200">
-                                <button name="commit" type="submit" class="  px-3 py-3 w-full text-lg font-medium text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
+                                <button name="bookNow" type="submit" class="  px-3 py-3 w-full text-lg font-medium text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
                                     Book Now
                                 </button>
                             </div>
@@ -87,16 +90,31 @@
                 </div>
 
 
+                <?php
 
+
+$s = "select * from package where Packid='$_GET[packid]'";
+
+
+
+
+$cn = makeconnection();
+$result = mysqli_query($cn, $s);
+$r = mysqli_num_rows($result);
+//echo $r;
+
+while ($data = mysqli_fetch_array($result)) {
+$price = $data[3];
+?>
 
                 <div class="lg:col-span-3">
                     <div class="flex items-center justify-between">
                         <span class="block text-blue-500 capitalize font-bold text-5xl">
-                            Nikli-Mithamain Tour
+                        <?php echo $data[1]; ?>
                         </span>
                     </div>
                     <span class="block text-gray-500 capitalize font-bold text-lg mt-2">
-                        Nikli haor, Mithamain
+                    <?php echo $data[7]; ?>
                     </span>
 
 
@@ -105,19 +123,20 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-                            <h1 class="flex flex-col"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Duration</span><span class="text-sm font-bold text-green-600 tracking-tight">1 Day &amp; 1 Night</span></h1>
+                            <h1 class="flex flex-col"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Duration</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[8]; ?></span></h1>
                         </div>
                         <div class="flex sm:justify-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Tour Type</span><span class="text-sm font-bold text-green-600 tracking-tight">standard</span></h1>
+                            <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Tour Type</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[9]; ?></span></h1>
                         </div>
                         <div class="flex sm:justify-end gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500 h-6 w-6 sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                             </svg>
-                            <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Max Group Size</span><span class="text-sm font-bold text-green-600 tracking-tight">20</span></h1>
+                            <h1 class="flex flex-col gap-1"><span class="text-sm sm:text-base font-bold text-gray-500 tracking-tight">Max Group Size</span><span class="text-sm font-bold text-green-600 tracking-tight"><?php echo $data[10]; ?></span></h1>
                         </div>
                     </div>
+
                     <!-- Swiper -->
                     <div class="swiper mySwiper rounded-lg h-96">
                         <div class="swiper-wrapper">
@@ -132,7 +151,7 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
                     </div>
-
+<?php } ?>
                     <!-- Swiper JS -->
                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -338,7 +357,15 @@
     </section>
 
 
-
+    <?php
+    if (isset($_POST["bookNow"])) {
+        $cn = makeconnection();
+        $s = "insert into bookInfo (Date,PackageId,Price) values('" . $_POST["date"] . "','" . $_GET["packid"] . "','" . $price . "')";
+        mysqli_query($cn, $s);
+        mysqli_close($cn);
+        echo "<script>alert('Record Saved');</script>";
+    }
+    ?>
 
     <?php include('footer.php'); ?>
 

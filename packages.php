@@ -52,7 +52,7 @@
 
                                     $s = "select * from category";
                                     $result = mysqli_query($cn, $s);
-                                    $r = mysqli_num_rows($result);
+                                    $catResult = mysqli_num_rows($result);
                                     //echo $r;
 
                                     while ($data = mysqli_fetch_array($result)) {
@@ -78,9 +78,6 @@
 
 
                             <div class="flex justify-between px-5 py-3 border-t border-gray-200">
-                                <button name="reset" type="button" class="text-xs font-medium text-gray-600 underline rounded">
-                                    Reset All
-                                </button>
 
                                 <button name="commit" type="submit" class="px-5 py-3 text-xs font-medium text-white transition-colors duration-200 transform bg-green-500 rounded-md hover:bg-green-400 focus:outline-none focus:bg-green-400">
                                     Apply Filters
@@ -152,17 +149,21 @@
                                             </svg> <a href="#" class="mx-1 font-semibold text-xs text-green-800 "><?php echo $data["Duration"]; ?></a>
                                         </div>
                                     </div>
+                                    <form method="post">
+                                        <button name="showDetailsBtn" type="button" class="flex items-center justify-center w-full px-8 py-4 mt-4 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
 
-                                    <button name="add" type="button" class="flex items-center justify-center w-full px-8 py-4 mt-4 text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
-                                        
-                                    <span class="text-sm font-medium">
-                                        <a href="packageDetails.php">  Show Details</a>
-                                        </span>
+                                            <span name=<?php echo $data["Packid"]; ?> class="text-sm font-medium">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                        </svg>
-                                    </button>
+                                                <?php echo  "<a href='packageDetails.php?packid=$data[Packid]'> Show Details</a>"; ?>
+                                                <!-- echo "<tr><td style=' padding:5px;'><a href='subcat.php?catid=$data[0]'>$data[1]</a></td></tr>"; -->
+
+                                            </span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                                            </svg>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -185,14 +186,12 @@
         }
     ?>
         <script>
-            window.location.href = 'subpackages.php?condition=<?php echo $condition; ?>';
-            </script>
+            window.location.href = 'packageDetails.php?condition=<?php echo $condition; ?>';
+        </script>
     <?php
     }
 
     ?>
-
-
 
 
     <?php include('footer.php'); ?>
