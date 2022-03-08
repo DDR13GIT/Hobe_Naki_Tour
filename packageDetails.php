@@ -64,7 +64,7 @@
                                     </div>
 
 
-                                    <div class="relative flex py-4 px-1 gap-2"><input name="yes" type="checkbox" class="focus:ring-brandColor mt-1 h-4 w-4 text-brandColor border-gray-300 rounded">
+                                    <div class="relative flex py-4 px-1 gap-2"><input name="tourGuide" type="checkbox" class="focus:ring-brandColor mt-1 h-4 w-4 text-brandColor border-gray-300 rounded">
                                         <div><label for="yes" class="font-medium text-gray-700 select-none">Need tour guide?</label>
                                             <p class="font-medium text-gray-500 text-md"><span class="font-bold">200৳</span> will be added </p>
                                         </div>
@@ -360,7 +360,11 @@ $price = $data[3];
     <?php
     if (isset($_POST["bookNow"])) {
         $cn = makeconnection();
-        $s = "insert into bookInfo (Date,PackageId,Price) values('" . $_POST["date"] . "','" . $_GET["packid"] . "','" . $price . "')";
+        $yes;
+        if (isset($_POST["tourGuide"])) {
+           $yes=200;
+        }
+        $s = "insert into bookInfo (Date,PackageId,Price,additionalExpense) values('" . $_POST["date"] . "','" . $_GET["packid"] . "','" . $price . "','" . $yes . "')";
         mysqli_query($cn, $s);
         mysqli_close($cn);
         echo "<script>alert('Record Saved');</script>";
@@ -372,3 +376,4 @@ $price = $data[3];
 </body>
 
 </html>
+
