@@ -175,7 +175,8 @@
         $s = "insert into contactus(Name,Phno,Email,Message) values('" . $_POST["Name"] . "','" . $_POST["Phno"] . "','" . $_POST["Email"] . "','" . $_POST["Message"] . "')";
         mysqli_query($cn, $s);
         mysqli_close($cn);
-        echo "<script>alert('Record Saved');</script>";
+        echo "<script>alert('Record Saved');
+        </script>";
     }
     ?>
 
