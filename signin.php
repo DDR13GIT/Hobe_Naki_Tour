@@ -37,7 +37,7 @@
 
             if ($_SESSION["usertype"] == "Admin") {
             
-                header("location:admin/dashboardIndex.php");
+                header("location:admin/home.php");
 
 
             } else if ($_SESSION["usertype"] == "General") {
