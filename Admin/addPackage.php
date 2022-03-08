@@ -123,123 +123,126 @@
 	</section>
 
 	<?php
-	$newpic1; $newpic2; $newpic3;$newcoverpic;
+	$newpic1;
+	$newpic2;
+	$newpic3;
+	$newcoverpic;
 
 	if (isset($_POST["saveBTN"])) {
 
-		if(isset($_FILES['pic1'])){
-		$img_name = $_FILES['pic1']['name'];
-		$img_size = $_FILES['pic1']['size'];
-		$tmp_name = $_FILES['pic1']['tmp_name'];
-		$error = $_FILES['pic1']['error'];
+		if (isset($_FILES['pic1'])) {
+			$img_name = $_FILES['pic1']['name'];
+			$img_size = $_FILES['pic1']['size'];
+			$tmp_name = $_FILES['pic1']['tmp_name'];
+			$error = $_FILES['pic1']['error'];
 
 
-		if ($error === 0) {
-			echo $img_name;
-			if ($img_size > 170000) {
-				$em = "Sorry, your file is too large.";
-			} else {
-				$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-				$img_ex_lc = strtolower($img_ex);
+			if ($error === 0) {
+				
+				if ($img_size > 270000) {
+					$em = "Sorry, your file is too large.";
+				} else {
+					$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+					$img_ex_lc = strtolower($img_ex);
 
-				$allowed_exs = array("jpg", "jpeg", "png");
+					$allowed_exs = array("jpg", "jpeg", "png");
 
-				if (in_array($img_ex_lc, $allowed_exs)) {
-					$new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
-					$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
-					move_uploaded_file($tmp_name, $img_upload_path);
-					$newpic1 = $new_img_name;
+					if (in_array($img_ex_lc, $allowed_exs)) {
+						$new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
+						$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
+						move_uploaded_file($tmp_name, $img_upload_path);
+						$newpic1 = $new_img_name;
+					}
 				}
 			}
 		}
-	}
-	if(isset($_FILES['pic2'])){
-		$img_name = $_FILES['pic2']['name'];
-		$img_size = $_FILES['pic2']['size'];
-		$tmp_name = $_FILES['pic2']['tmp_name'];
-		$error = $_FILES['pic2']['error'];
+		if (isset($_FILES['pic2'])) {
+			$img_name = $_FILES['pic2']['name'];
+			$img_size = $_FILES['pic2']['size'];
+			$tmp_name = $_FILES['pic2']['tmp_name'];
+			$error = $_FILES['pic2']['error'];
 
 
-		if ($error === 0) {
-			echo $img_name;
-			if ($img_size > 170000) {
-				$em = "Sorry, your file is too large.";
-			} else {
-				$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-				$img_ex_lc = strtolower($img_ex);
+			if ($error === 0) {
+				
+				if ($img_size > 270000) {
+					$em = "Sorry, your file is too large.";
+				} else {
+					$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+					$img_ex_lc = strtolower($img_ex);
 
-				$allowed_exs = array("jpg", "jpeg", "png");
+					$allowed_exs = array("jpg", "jpeg", "png");
 
-				if (in_array($img_ex_lc, $allowed_exs)) {
-					$new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
-					$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
-					move_uploaded_file($tmp_name, $img_upload_path);
-					$newpic2 = $new_img_name;
+					if (in_array($img_ex_lc, $allowed_exs)) {
+						$new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
+						$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
+						move_uploaded_file($tmp_name, $img_upload_path);
+						$newpic2 = $new_img_name;
+					}
 				}
 			}
 		}
-	}
-	if(isset($_FILES['pic3'])){
-		$img_name = $_FILES['pic3']['name'];
-		$img_size = $_FILES['pic3']['size'];
-		$tmp_name = $_FILES['pic3']['tmp_name'];
-		$error = $_FILES['pic3']['error'];
+		if (isset($_FILES['pic3'])) {
+			$img_name = $_FILES['pic3']['name'];
+			$img_size = $_FILES['pic3']['size'];
+			$tmp_name = $_FILES['pic3']['tmp_name'];
+			$error = $_FILES['pic3']['error'];
 
 
-		if ($error === 0) {
-			echo $img_name;
-			if ($img_size > 170000) {
-				$em = "Sorry, your file is too large.";
-			} else {
-				$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-				$img_ex_lc = strtolower($img_ex);
+			if ($error === 0) {
+				
+				if ($img_size > 270000) {
+					$em = "Sorry, your file is too large.";
+				} else {
+					$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+					$img_ex_lc = strtolower($img_ex);
 
-				$allowed_exs = array("jpg", "jpeg", "png");
+					$allowed_exs = array("jpg", "jpeg", "png");
 
-				if (in_array($img_ex_lc, $allowed_exs)) {
-					$new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
-					$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
-					move_uploaded_file($tmp_name, $img_upload_path);
-					$newpic3 = $new_img_name;
+					if (in_array($img_ex_lc, $allowed_exs)) {
+						$new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
+						$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
+						move_uploaded_file($tmp_name, $img_upload_path);
+						$newpic3 = $new_img_name;
+					}
 				}
 			}
 		}
-	}
-	if(isset($_FILES['coverpic'])){
-		$img_name = $_FILES['coverpic']['name'];
-		$img_size = $_FILES['coverpic']['size'];
-		$tmp_name = $_FILES['coverpic']['tmp_name'];
-		$error = $_FILES['coverpic']['error'];
+		if (isset($_FILES['coverpic'])) {
+			$img_name = $_FILES['coverpic']['name'];
+			$img_size = $_FILES['coverpic']['size'];
+			$tmp_name = $_FILES['coverpic']['tmp_name'];
+			$error = $_FILES['coverpic']['error'];
 
 
-		if ($error === 0) {
-			echo $img_name;
-			if ($img_size > 170000) {
-				$em = "Sorry, your file is too large.";
-			} else {
-				$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-				$img_ex_lc = strtolower($img_ex);
+			if ($error === 0) {
+				
+				if ($img_size > 270000) {
+					$em = "Sorry, your file is too large.";
+				} else {
+					$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+					$img_ex_lc = strtolower($img_ex);
 
-				$allowed_exs = array("jpg", "jpeg", "png");
+					$allowed_exs = array("jpg", "jpeg", "png");
 
-				if (in_array($img_ex_lc, $allowed_exs)) {
-					$new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
-					$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
-					move_uploaded_file($tmp_name, $img_upload_path);
-					$newcoverpic = $new_img_name;
+					if (in_array($img_ex_lc, $allowed_exs)) {
+						$new_img_name = uniqid("IMG-", true) . $img_ex_lc;
+						$img_upload_path = 'C:/xampp/htdocs/Hobe_Naki_Tour/projectImages/' . $new_img_name;
+						move_uploaded_file($tmp_name, $img_upload_path);
+						$newcoverpic = $new_img_name;
+					}
 				}
 			}
 		}
-	}
 
 
-					$s = "insert into package(packname,category,packprice,location,duration,groupsize,tourtype,pic1,pic2,pic3,coverpic) 
+		$s = "insert into package(packname,category,packprice,location,duration,groupsize,tourtype,pic1,pic2,pic3,coverpic) 
     values('" . $_POST["packageName"] . "','" . $_POST["selectCategory"] .  "','" . $_POST["packagePrice"] . "','" . $_POST["location"] . "','" . $_POST["duration"] . "','" . $_POST["groupSize"] . "','" . $_POST["tourType"] . "','" . $newpic1  . "','" . $newpic2  . "','" . $newpic3  . "','" . $newcoverpic  . "')";
-					mysqli_query($cn, $s);
-					mysqli_close($cn);
-					echo "<script>alert('Record Save');</script>";
-				}
-			
+		mysqli_query($cn, $s);
+		mysqli_close($cn);
+		echo "<script>alert('Record Save');</script>";
+	}
+
 
 	?>
 	<?php include('adminFooter.php'); ?>
